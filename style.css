@@ -13,34 +13,34 @@
 }
 
 .hover:hover {
-    background: #f1f3f4;
-    color: black;
-    border-radius: 50%;
-    cursor: pointer;
+  background: #f1f3f4;
+  color: black;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .tooltip {
-    position: relative;
-    display: inline;
+  position: relative;
+  display: inline;
 }
 
 .tooltip-text {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    font-size: 0.78rem;
-    background-color: #323232;
-    color: white;
-    opacity: 0.8;
-    padding: 5px;
-    white-space: nowrap;
-    border-radius: 5px;
-    visibility: hidden;
-    z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  font-size: 0.78rem;
+  background-color: #323232;
+  color: white;
+  opacity: 0.8;
+  padding: 5px;
+  white-space: nowrap;
+  border-radius: 5px;
+  visibility: hidden;
+  z-index: 1;
 }
 
 .tooltip:hover .tooltip-text {
-    visibility: visible;
+  visibility: visible;
 }
 
 /* NAVBAR STYLES  */
@@ -92,98 +92,131 @@ input:focus {
 
 /* SIDEBAR  */
 .sidebar {
-    position: fixed;
-    left: 0;
-    top: 64px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 18px;
-    margin-top: 5px;
-    color: #5f6368;
-    width: 60px;
-    overflow-x: hidden;
+  position: fixed;
+  left: 0;
+  top: 64px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  color: #5f6368;
+  width: 80px;
+  overflow-x: hidden;
+  transition: 0.8s;
+  height: 100%;
+}
+.sidebar-hover {
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
+    0 2px 6px 2px rgba(60, 64, 67, 0.149);
+    background: white;
 }
 .active {
-    background-color: #fef0c3;
-    border-radius: 50%;
-    color: black;
+  background-color: #fef0c3;
+  border-radius: 50%;
+  color: black;
 }
 .active:hover {
-    background-color: #fef0c3;
+  background-color: #fef0c3;
 }
 
 .sidebar .sidebar-item {
-    padding: 3px;
-    display: flex;
-    align-items: center;
+  padding: 3px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .sidebar-item .sidebar-text {
-    color: black;
-    font-size: 0.9rem;
-    margin-left: 20px;
-    width: 250px;
+  color: black;
+  font-size: 0.9rem;
+  margin-left: 20px;
+  width: 250px;
+}
+
+.sidebar-item .material-symbols-outlined {
+  margin-left: 18px; 
 }
 
 .sidebar-item:nth-child(1) {
-    margin-top: 5px;
+  margin-top: 5px;
+}
+
+.sidebar-item:hover {
+  background: #f1f3f4;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.sidebar-active-item {
+  background-color: #fef0c3;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.sidebar-active-item:hover {
+  background-color: #fef0c3;
 }
 
 /* MAIN FORM  */
 .form-container {
-    background: #fff;
-    max-width: 598px;
-    margin: 32px auto;
-    border: 1px solid #e0e1e0;
-    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 2px 6px 2px rgba(60,64,67,0.149);
-    border-radius: 8px;
+  background: #fff;
+  max-width: 598px;
+  margin: 32px auto;
+  border: 1px solid #e0e1e0;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
+    0 2px 6px 2px rgba(60, 64, 67, 0.149);
+  border-radius: 8px;
 }
 .form-container form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    color: #5f6368;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  color: #5f6368;
 }
 
 .note-text {
-    border: none;
-    font-size: 1rem;
-    height: 100%;
-    padding: 10px;
-    margin-left: 10px;
-    width: 100%;
-    margin-right: 10px;
-    padding-left: 10px;
+  border: none;
+  font-size: 1rem;
+  height: 100%;
+  padding: 10px;
+  margin-left: 10px;
+  width: 100%;
+  margin-right: 10px;
+  padding-left: 10px;
 }
 
 .note-title {
-    border: none;
-    font-size: 1rem;
-    height: 100%;
-    padding: 10px;
-    margin-left: 10px;
-    width: 100%;
-    margin-right: 10px;
-    padding-left: 10px;
+  border: none;
+  font-size: 1rem;
+  height: 100%;
+  padding: 10px;
+  margin-left: 10px;
+  width: 100%;
+  margin-right: 10px;
+  padding-left: 10px;
 }
 
 .form-actions {
-    display: flex;
-}
-
-.active-form form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 10px;
-}
-
-.active-form form .form-actions .icons {
   display: flex;
 }
 
-.active-form form .form-actions {
+.active-form {
+  display: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+}
+
+.form .form-actions .icons {
+  display: flex;
+}
+
+.form .form-actions {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -204,22 +237,29 @@ input:focus {
 
 /* ALL NOTES  */
 .notes {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 50px;
 }
 
 .note {
   background-color: white;
   margin: 10px;
-  width: 240px;
+  width: 280px;
   border: 1px solid #e0e1e0;
   border-radius: 8px;
   position: relative;
+  cursor: pointer;
+}
+.note:hover {
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
+    0 2px 6px 2px rgba(60, 64, 67, 0.149);
 }
 
 .note .title {
   width: 100%;
-  margin: 15px 0 0 15px ;
+  margin: 15px 0 0 15px;
 }
 
 .note .text {
@@ -232,16 +272,19 @@ justify-content: center;
   display: flex;
   padding: 0;
   justify-content: center;
+  visibility: hidden;
 }
 
 .note-footer .material-symbols-outlined {
   color: #5f6368;
+  font-size: .9rem;
 }
 
 .note .check-circle {
   position: absolute;
   top: -20px;
   left: -20px;
+  visibility: hidden;
 }
 
 /* MODAL CONTENT  */
